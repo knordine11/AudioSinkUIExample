@@ -13,24 +13,6 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QPushButton" name="btnPlay">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>100</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Play</string>
-   </property>
-  </widget>
   <widget class="QComboBox" name="cboFiles">
    <property name="geometry">
     <rect>
@@ -44,6 +26,42 @@
     <font>
      <pointsize>16</pointsize>
     </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCapture">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>90</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Capture File</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnStopSound">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>140</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Stop File</string>
    </property>
   </widget>
  </widget>

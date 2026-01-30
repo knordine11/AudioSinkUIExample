@@ -1,12 +1,14 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QMediaDevices>
+#include <QUrl>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    ui->cboFiles->addItem("select file");
     ui->cboFiles->addItem("v43.wav");
     ui->cboFiles->addItem("v45.wav");
     ui->cboFiles->addItem("v47.wav");
@@ -60,6 +62,7 @@ void Widget::handleStateChanged(QtAudio::State newState)
     case QtAudio::IdleState:
         // Finished playing (no more data)
         //Widget::stopAudioOutput();
+        audioOut->reset();
         qDebug() << QtAudio::State();
         break;
 
@@ -82,13 +85,6 @@ void Widget::handleStateChanged(QtAudio::State newState)
     }
 }
 
-void Widget::on_btnPlay_clicked()
-{
-    filename = ui->cboFiles->currentText();
-    qDebug () << filename;
-    GetWaveFile();
-}
-
 void Widget::newSound()
 {
     sourceFile.readAll();
@@ -97,3 +93,17 @@ void Widget::newSound()
     qDebug () << filename;
     GetWaveFile();
 }
+
+void Widget::on_btnCapture_clicked()
+{
+
+}
+
+
+void Widget::on_btnStopSound_clicked()
+{
+    audioOut->reset();
+    sourceFile.readAll();
+    sourceFile.close();
+}
+

@@ -28,7 +28,10 @@ public:
     QAudioSink* audioOut;
 
 private slots:
-    void on_btnPlay_clicked();
+
+    void on_btnCapture_clicked();
+
+    void on_btnStopSound_clicked();
 
 private:
     Ui::Widget *ui;

@@ -39,3 +39,6 @@ DISTFILES += \
     v_sounds/v52.wav \
     v_sounds/v54.wav \
     v_sounds/v55.wav
+
+RESOURCES += \
+    Resources.qrc
